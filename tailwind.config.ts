@@ -13,6 +13,9 @@ const config: Config = {
         inter: ["var(--inter-font)"],
         carlgine: ["var(--carlgine-font)"],
       },
+      colors: {
+        beige: "#f7f6f2",
+      },
     },
   },
   plugins: [],
