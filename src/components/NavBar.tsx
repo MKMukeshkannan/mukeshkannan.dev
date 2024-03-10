@@ -1,12 +1,27 @@
 "use client";
 
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 export default function NavBar() {
-  const [isOpen, setIsOpen] = useState<boolean>(true);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [activeNav, setActiveNav] = useState<boolean>(false);
+
+  const handleScroll = () => {
+    if (window.scrollY >= 540) setActiveNav(true);
+    else setActiveNav(false);
+  };
+
+  if (typeof window !== "undefined")
+    window.addEventListener("scroll", handleScroll);
 
   return (
-    <nav className="flex items-center justify-between w-full md:px-16 px-6 py-8 fixed top-0 z-[999] text-slate-900">
+    <motion.nav
+      initial={{ opacity: 0, y: -75 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.4 }}
+      className={`flex items-center justify-between w-full md:px-16 px-6 py-8 fixed top-0 z-[999] text-slate-900 ${activeNav && "bg-beige  rounded-b-lg shadow"}`}
+    >
       <h1 className="text-3xl cursor-pointer font-publicSans font-black">MK</h1>
 
       {isOpen ? (
@@ -43,6 +58,6 @@ export default function NavBar() {
         <h1 className="cursor-pointer">Work</h1>
         <h1 className="cursor-pointer">Contact</h1>
       </section>
-    </nav>
+    </motion.nav>
   );
 }

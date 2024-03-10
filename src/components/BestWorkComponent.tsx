@@ -1,4 +1,5 @@
 import Image from "next/image";
+import InViewAnimation from "./InViewAnimation";
 
 interface prop {
   index: number;
@@ -30,9 +31,13 @@ export default function BestWorkComponent({
       </section>
 
       <section className="lg:w-0 space-y-5 flex-grow p-8 ">
-        <h1 className="text-5xl font-publicSans text-slate-800">{title}</h1>
+        <InViewAnimation>
+          <h1 className="text-5xl font-publicSans text-slate-800">{title}</h1>
+        </InViewAnimation>
 
-        <p className="text-xl font-carlgine">{description}</p>
+        <InViewAnimation>
+          <p className="text-xl font-carlgine">{description}</p>
+        </InViewAnimation>
         <button className="font-publicSans rounded-md px-4 p-3 bg-slate-800 text-beige">
           Learn More
         </button>
