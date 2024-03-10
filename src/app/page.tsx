@@ -1,5 +1,7 @@
 import { NameMarquee, NavBar } from "@/components";
+import BestWorkComponent from "@/components/BestWorkComponent";
 import Image from "next/image";
+import { BestWork } from "@/libs/data";
 
 export default function Home() {
   return (
@@ -20,7 +22,35 @@ export default function Home() {
         </p>
         <NameMarquee />
       </section>
-      <section className="min-h-screen"></section>
+      <section className="bg-slate-900 p-16 rounded-t-3xl">
+        <h1 className="text-8xl font-publicSans text-beige mb-5">
+          Who Am I ?{" "}
+        </h1>
+        <p className="text-beige font-carlgine text-xl max-w-3xl">
+          I am Mukesh Kannan, second year pursuing my Computer Science degree at
+          Chennai Institute of Technology, Chennai. I have an Inquiring mind. I
+          am very adept at dealing with computational problems. I enjoy
+          problem-solving, so I am passionately pursuing a career in the
+          software development field.
+          <br />
+          <br />I am good at React, Express, C++, Figma, AWS, DevOps
+        </p>
+      </section>
+      <section className="min-h-screen p-24">
+        <h1 className="text-slate-800 text-center text-9xl mb-16 tracking-wider font-publicSans">
+          Best Works
+        </h1>
+
+        {BestWork.map((work, index) => (
+          <BestWorkComponent
+            type={work.type}
+            index={index}
+            title={work.title}
+            description={work.description}
+            image={work.image}
+          />
+        ))}
+      </section>
     </main>
   );
 }
