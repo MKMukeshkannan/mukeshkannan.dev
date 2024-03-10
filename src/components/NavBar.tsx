@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -40,23 +41,44 @@ export default function NavBar() {
       <section
         className={`w-full h-screen md:hidden absolute text-beige font-carlgine text-5xl flex flex-col items-center justify-center space-y-8 bg-slate-900 top-0 ${isOpen ? "left-0" : "left-[1000px]"} transition-all duration-500`}
       >
-        <h1 className="cursor-pointer">About</h1>
-        <h1 className="cursor-pointer">Work</h1>
-        <h1 className="cursor-pointer">Contact</h1>
+        <Link href="/about" className="cursor-pointer">
+          About
+        </Link>
+        <Link href="/work" className="cursor-pointer">
+          Work
+        </Link>
+        <a href="#contact" className="cursor-pointer">
+          Contact
+        </a>
         <section className="absolute bottom-10">
           <h1 className="text-sm text-center opacity-70">Socials</h1>
           <section className="flex text-xl space-x-3">
-            <a href="#">GitHub</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">Twitter</a>
+            <Link target="_blank" href="https://github.com/MKMukeshkannan">
+              GitHub
+            </Link>
+            <Link
+              target="_blank"
+              href="https://www.linkedin.com/in/mukesh-kannan-mk/"
+            >
+              LinkedIn
+            </Link>
+            <Link target="_blank" href="https://dev.to/mkmukeshkannan">
+              Dev.to
+            </Link>
           </section>
         </section>
       </section>
 
       <section className="hidden md:flex space-x-2 font-carlgine text-xl font-bold">
-        <h1 className="cursor-pointer">About</h1>
-        <h1 className="cursor-pointer">Work</h1>
-        <h1 className="cursor-pointer">Contact</h1>
+        <Link href="/about" className="cursor-pointer">
+          About
+        </Link>
+        <Link href="/work" className="cursor-pointer">
+          Work
+        </Link>
+        <a href="#contact" className="cursor-pointer">
+          Contact
+        </a>
       </section>
     </motion.nav>
   );

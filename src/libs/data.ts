@@ -1,3 +1,5 @@
+import { ThreadONDC } from "@/assets";
+
 export const BestWork = [
   {
     title: "Takshashila",
@@ -15,5 +17,12 @@ export const BestWork = [
     type: "internship",
     image:
       "https://nova-care.vercel.app/_next/image?url=%2FHeroMockup.png&w=1920&q=75",
+  },
+  {
+    title: "Threads ONDC",
+    description:
+      "VILGAX, a dynamic team fueled by a passion for programming excellence, stands as the Vanguard of Innovation and Logic in Games and Algorithms eXpedition. Uniting brilliant minds with a shared dedication to conquering coding challenges, VILGAX embodies a spirit of strategic brilliance and technological prowess.",
+    image: ThreadONDC,
+    type: "hackathon",
   },
 ];

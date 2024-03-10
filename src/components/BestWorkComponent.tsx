@@ -1,11 +1,11 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import InViewAnimation from "./InViewAnimation";
 
 interface prop {
   index: number;
   title: string;
   description: string;
-  image: string;
+  image: string | StaticImageData;
   type: string;
 }
 

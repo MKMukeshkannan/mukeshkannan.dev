@@ -8,3 +8,7 @@
   box-sizing: border-box;
   font-family: var("--inter-font");
 }
+
+html {
+  scroll-behavior: smooth;
+}

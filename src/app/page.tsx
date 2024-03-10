@@ -2,7 +2,7 @@ import { InViewAnimation, NameMarquee, NavBar } from "@/components";
 import BestWorkComponent from "@/components/BestWorkComponent";
 import Image from "next/image";
 import { BestWork } from "@/libs/data";
-import MukeshKannan from "@/assets/mukeshkannan.jpeg";
+import { MukeshKannan, EarthWireFrame } from "@/assets";
 
 export default function Home() {
   return (
@@ -12,13 +12,19 @@ export default function Home() {
         <InViewAnimation>
           <p className="font-carlgine text-3xl">This is, </p>
         </InViewAnimation>
-        <Image
-          alt="mukesh-kannan"
-          src="https://img.freepik.com/free-photo/aesthetic-minimal-white-grid-pattern-wallpaper_53876-96916.jpg"
-          width={400}
-          height={600}
-          className="opacity-60 left-20 absolute top-1/4 hidden lg:block"
-        />
+
+        <section className=" left-20 absolute top-1/4 ">
+          <InViewAnimation>
+            <Image
+              alt="mukesh-kannan"
+              src={EarthWireFrame}
+              width={300}
+              height={300}
+              className="opacity-60 hidden lg:block"
+            />
+          </InViewAnimation>
+        </section>
+
         <section className="absolute max-w-96 lg:top-1/2 top-1/3  lg:right-20 opacity-60">
           <InViewAnimation>
             <p className="text-2xl font-carlgine text-right pr-3">
@@ -32,7 +38,7 @@ export default function Home() {
       <section className="bg-slate-900 p-8 lg:p-16 rounded-t-3xl lg:grid grid-cols-2">
         <InViewAnimation>
           <h1 className="text-7xl lg:text-8xl font-publicSans text-beige mb-5 self-end">
-            Who Am I ?
+            Who Am I?
           </h1>
         </InViewAnimation>
 
@@ -77,22 +83,31 @@ export default function Home() {
         ))}
       </section>
 
-      <section className="bg-slate-800 p-8 lg:p-24 ">
+      <section id="contact" className="bg-slate-800 p-8 lg:p-24 ">
         <InViewAnimation>
           <h1 className="text-beige text-8xl lg:text-8xl text-center border-b-2 pb-6 border-beige border-opacity-40 font-publicSans">
             Get In Touch
           </h1>
         </InViewAnimation>
         <section className="text-center space-x-2 mt-6">
-          <button className="text-xl hover:text-slate-800 hover:bg-beige text-beige border-beige border rounded-lg p-2 px-4">
+          <a
+            href="tel:7397220994"
+            className="cursor-pointer text-xl hover:text-slate-800 hover:bg-beige text-beige border-beige border rounded-lg p-2 px-4"
+          >
             Phone
-          </button>
-          <button className="text-xl hover:text-slate-800 hover:bg-beige text-beige border-beige border rounded-lg p-2 px-4">
+          </a>
+          <a
+            href="mailto:mukeshkannan311@gmail.com"
+            className="cursor-pointer text-xl hover:text-slate-800 hover:bg-beige text-beige border-beige border rounded-lg p-2 px-4"
+          >
             Email
-          </button>
-          <button className="text-xl hover:text-slate-800 hover:bg-beige text-beige border-beige border rounded-lg p-2 px-4">
+          </a>
+          <a
+            href="https://www.linkedin.com/in/mukesh-kannan-mk/"
+            className="cursor-pointer text-xl hover:text-slate-800 hover:bg-beige text-beige border-beige border rounded-lg p-2 px-4"
+          >
             LinkedIn
-          </button>
+          </a>
         </section>
       </section>
 
@@ -103,9 +118,18 @@ export default function Home() {
         <section className="lg:text-right text-center lg:pb-0 pb-4">
           <h1 className="text-xs opacity-75">Socials</h1>
           <section className="space-x-2">
-            <a href="#">GitHub</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">Twitter</a>
+            <a target="_blank" href="https://github.com/MKMukeshkannan">
+              GitHub
+            </a>
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/mukesh-kannan-mk/"
+            >
+              LinkedIn
+            </a>
+            <a target="_blank" href="https://dev.to/mkmukeshkannan">
+              Dev.to
+            </a>
           </section>
         </section>
       </section>
