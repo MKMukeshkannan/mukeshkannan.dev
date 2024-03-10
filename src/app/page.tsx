@@ -51,6 +51,31 @@ export default function Home() {
           />
         ))}
       </section>
+
+      <section className="bg-slate-800 p-24 ">
+        <h1 className="text-beige text-8xl text-center border-b-2 pb-6 border-beige border-opacity-40 font-publicSans">
+          Get In Touch
+        </h1>
+        <section className="text-center space-x-2 mt-6">
+          <button className="text-xl hover:text-slate-800 hover:bg-beige text-beige border-beige border rounded-lg p-2 px-4">Phone</button>
+          <button className="text-xl hover:text-slate-800 hover:bg-beige text-beige border-beige border rounded-lg p-2 px-4">Email</button>
+          <button className="text-xl hover:text-slate-800 hover:bg-beige text-beige border-beige border rounded-lg p-2 px-4">LinkedIn</button>
+        </section>
+      </section>
+
+      <section className="text-beige bg-slate-800 flex items-end justify-between p-8 px-16">
+        <h1 className="text-lg">
+          &copy; Mukesh Kannan | All Rights Reserved 2024
+        </h1>
+        <section className="">
+          <h1 className="text-xs opacity-75">Socials</h1>
+          <section className="space-x-2">
+            <a href="#">GitHub</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Twitter</a>
+          </section>
+        </section>
+      </section>
     </main>
   );
 }
