@@ -1,4 +1,4 @@
-import { InViewAnimation, NameMarquee, NavBar } from "@/components";
+import { InViewAnimation, NameMarquee } from "@/components";
 import BestWorkComponent from "@/components/BestWorkComponent";
 import Image from "next/image";
 import { BestWork } from "@/libs/data";
@@ -7,7 +7,6 @@ import { MukeshKannan, EarthWireFrame } from "@/assets";
 export default function Home() {
   return (
     <main className="bg-beige">
-      <NavBar />
       <section className="flex flex-col items-start justify-end p-8 min-h-screen w-full relative overflow-hidden select-none">
         <InViewAnimation>
           <p className="font-carlgine text-3xl">This is, </p>
@@ -111,7 +110,7 @@ export default function Home() {
         </section>
       </section>
 
-      <section className="text-beige bg-slate-800 flex lg:flex-row flex-col-reverse lg:items-end items-center justify-between p-8 lg:px-16">
+      <footer className="text-beige bg-slate-800 flex lg:flex-row flex-col-reverse lg:items-end items-center justify-between p-8 lg:px-16">
         <h1 className="text-xs lg:text-lg">
           &copy; Mukesh Kannan | All Rights Reserved 2024
         </h1>
@@ -132,7 +131,7 @@ export default function Home() {
             </a>
           </section>
         </section>
-      </section>
+      </footer>
     </main>
   );
 }

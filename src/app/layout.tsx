@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { carlgine, inter, publicSans } from "@/assets/fonts";
 import "./globals.css";
+import NavBar from "@/components/NavBar";
 
 export const metadata: Metadata = {
   title: "Mukesh Kannan",
@@ -14,7 +15,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${publicSans.variable} ${carlgine.variable}`}>
+      <body
+        className={`${inter.variable} ${publicSans.variable} ${carlgine.variable}`}
+      >
+        <NavBar />
         {children}
       </body>
     </html>

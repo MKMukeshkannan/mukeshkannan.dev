@@ -4,6 +4,7 @@ import { Variants, motion, useAnimation, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
 
 interface props {
+  delay?: number;
   children: JSX.Element;
 }
 
@@ -12,7 +13,7 @@ const varients: Variants = {
   visible: { opacity: 1, y: 0 },
 };
 
-export default function InViewAnimation({ children }: props) {
+export default function InViewAnimation({ children, delay = 0 }: props) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -28,7 +29,7 @@ export default function InViewAnimation({ children }: props) {
       variants={varients}
       initial="hidden"
       animate={animate}
-      transition={{ duration: 0.4 }}
+      transition={{ duration: 0.4, delay }}
     >
       {children}
     </motion.section>
