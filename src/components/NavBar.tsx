@@ -10,7 +10,7 @@ export default function NavBar() {
   const [activeNav, setActiveNav] = useState<boolean>(false);
 
   const handleScroll = () => {
-    if (window.scrollY >= 540) setActiveNav(true);
+    if (window.scrollY >= 50) setActiveNav(true);
     else setActiveNav(false);
   };
 
@@ -22,7 +22,7 @@ export default function NavBar() {
       initial={{ opacity: 0, y: -75 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4 }}
-      className={`flex items-center justify-between w-full md:px-16 px-6 py-8 fixed top-0 z-[999] text-slate-900 ${activeNav && "bg-beige  rounded-b-lg shadow"}`}
+      className={`flex items-center justify-between w-full md:px-16 px-6 py-8 fixed top-0 z-[999] text-slate-900 ${activeNav && "bg-beige  rounded-b-lg shadow"} transition-colors ease-in duration-200`}
     >
       <Link href="/" onClick={() => setIsOpen(false)} className="text-3xl cursor-pointer font-publicSans font-black">MK</Link>
 

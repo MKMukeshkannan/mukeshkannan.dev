@@ -11,8 +11,8 @@ export default function About() {
           </InViewAnimation>
           <InViewAnimation delay={0.1}>
             <p className="font-light text-xl md:pr-48">
-              Here's a showcase of my coding adventures, each with its own
-              backstory. During hackathons, I've channeled my inner coding
+              Here&apos;s a showcase of my coding adventures, each with its own
+              backstory. During hackathons, I&apos;ve channeled my inner coding
               superhero to craft innovative solutions at lightning speed. My
               internship projects? Think of them as my contributions to the
               corporate world, where I turned coffee into code (and

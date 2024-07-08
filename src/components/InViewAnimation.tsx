@@ -5,6 +5,7 @@ import { useEffect, useRef } from "react";
 
 interface props {
   delay?: number;
+  style?: string;
   children: JSX.Element;
 }
 
@@ -13,7 +14,11 @@ const varients: Variants = {
   visible: { opacity: 1, y: 0 },
 };
 
-export default function InViewAnimation({ children, delay = 0 }: props) {
+export default function InViewAnimation({
+  style = "",
+  children,
+  delay = 0,
+}: props) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -21,7 +26,7 @@ export default function InViewAnimation({ children, delay = 0 }: props) {
 
   useEffect(() => {
     if (isInView) animate.start("visible");
-  }, [isInView]);
+  }, [isInView, animate]);
 
   return (
     <motion.section
@@ -30,6 +35,7 @@ export default function InViewAnimation({ children, delay = 0 }: props) {
       initial="hidden"
       animate={animate}
       transition={{ duration: 0.4, delay }}
+      className={style}
     >
       {children}
     </motion.section>
