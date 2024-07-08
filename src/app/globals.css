@@ -12,3 +12,10 @@
 html {
   scroll-behavior: smooth;
 }
+
+.graph-paper {
+	background-color: #F7F6F2;
+  background-image: 
+    conic-gradient(at calc(100% - 2px) calc(100% - 2px),#0234EF60 270deg, #0000 0);
+  background-size: 100px 100px, 10px 10px;
+}

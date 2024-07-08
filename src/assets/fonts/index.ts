@@ -18,3 +18,8 @@ export const carlgine = localFont({
   src: "./CarlgineRegular.ttf",
   variable: "--carlgine-font",
 });
+
+export const monolo = localFont({
+  src: "./manolo-mono.ttf",
+  variable:"--manolo-font"
+})

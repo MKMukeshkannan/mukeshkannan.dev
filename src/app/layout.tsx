@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { carlgine, inter, publicSans } from "@/assets/fonts";
+import { carlgine, inter, monolo, publicSans } from "@/assets/fonts";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
 
@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${publicSans.variable} ${carlgine.variable}`}
+        className={`${inter.variable} ${publicSans.variable} ${carlgine.variable} ${monolo.variable}`}
       >
         <NavBar />
         {children}

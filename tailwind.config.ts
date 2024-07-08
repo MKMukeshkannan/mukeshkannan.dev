@@ -12,9 +12,12 @@ const config: Config = {
         publicSans: ["var(--publicSans-font)"],
         inter: ["var(--inter-font)"],
         carlgine: ["var(--carlgine-font)"],
+        manolo: ["var(--manolo-font)"]
       },
       colors: {
-        beige: "#f7f6f2",
+        beige: "#F7F6F2",
+        dead: "#0DEAE0",
+        accentBlue: "#0234EF"
       },
     },
   },
